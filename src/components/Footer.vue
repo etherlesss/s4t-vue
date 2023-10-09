@@ -17,6 +17,53 @@
     </footer>
 </template>
 
-<script src="../ts/footer.ts"></script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 
-<style>@import "/src/css/styles.less";</style>
+export default defineComponent({
+    data() {
+        return {
+            links: ['Tienda', 'Sobre nosotros', 'Contacto', 'Soporte']
+        };
+    },
+    name: 'Footer'
+})
+</script>
+
+<style lang="less">
+@bg-col: #121212; // Background color
+@fg-col: #ffffff; // Foreground color
+footer {
+    background-color: @bg-col;
+    color: @fg-col;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer-content {
+    padding: 2%;
+}
+
+footer .top {
+    border-bottom: 2px solid @fg-col;
+}
+
+footer .bottom {
+    padding: 20px;
+    margin-bottom: -20px;
+}
+
+footer h2 {
+    font-size: 24px;
+}
+
+.links-list > li{
+    margin-block: 10px;
+}
+
+.links-list {
+    margin-bottom: 20px;
+}
+</style>

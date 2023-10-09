@@ -32,6 +32,36 @@
     </nav>
 </template>
 
-<script src="../ts/navbar.ts"></script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 
-<style>@import "/src/css/styles.less";</style>
+export default defineComponent({
+    data() {
+        return {
+            links: ['Link1', 'Link2', 'Link3']
+        };
+    },
+    name: 'Navbar'
+});
+</script>
+
+<style lang="less">
+@bg-col: #121212; // Background color
+@fg-col: #ffffff; // Foreground color
+.navbar {
+    background-color: @bg-col !important;
+}
+
+.nav-link {
+    color: @fg-col !important;
+}
+
+.navbar-toggler {
+    border: none;
+    box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0%) invert();
+}
+</style>

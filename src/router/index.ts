@@ -1,35 +1,47 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Frontpage from "../views/Frontpage.vue"
-import Search from "../views/Search.vue"
-import Cart from "../views/Cart.vue"
-import Details from "../views/Details.vue"
-import Support from "../views/Support.vue"
+import HomeView from '@/views/HomeView.vue'
+import SearchView from '@/views/SearchView.vue'
+import CartView from '@/views/CartView.vue'
+import DetailView from '@/views/DetailView.vue'
+import SupportView from '@/views/SupportView.vue'
+import LoginView from '@/views/LoginView.vue'
+import SignupView from '@/views/SignupView.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: Frontpage
+    name: 'home',
+    component: HomeView
   },
   {
     path: '/search',
-    name: 'Search',
-    component: Search
+    name: 'search',
+    component: SearchView
   },
   {
     path: '/cart',
-    name: 'Cart',
-    component: Cart
+    name: 'cart',
+    component: CartView
   },
   {
     path: '/details',
-    name: 'Details',
-    component: Details
+    name: 'details',
+    component: DetailView
   },
   {
     path: '/support',
-    name: 'Support',
-    component: Support
+    name: 'support',
+    component: SupportView
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: SignupView
   }
 ]
 
