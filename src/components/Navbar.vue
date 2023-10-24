@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item" v-for="link in links">
-                        <a class="nav-link" href="#">{{ link }}</a>
+                        <router-link class="nav-link" :to="link.url">{{ link.name }}</router-link>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -22,9 +22,7 @@
                         <router-link class="nav-link" to="/cart"><i class="bi bi-cart3 mx-3"></i></router-link>
                     </li>
                     <li class="nav-btn">
-                        <a class="nav-link" href="/pages/login.html">
-                            <i class="bi bi-person-circle"></i>
-                        </a>
+                        <router-link class="nav-link" to="/login"><i class="bi bi-person-circle"></i></router-link>
                     </li>
                 </ul>
             </div>
@@ -38,7 +36,11 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     data() {
         return {
-            links: ['Link1', 'Link2', 'Link3']
+            links: [
+                { name: 'Productos', url: '/search' },
+                { name: 'Soporte al cliente', url: '/support' },
+                { name: 'Sobre nosotros', url: '/about' }
+            ]
         };
     },
     name: 'Navbar'

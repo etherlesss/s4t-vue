@@ -4,12 +4,14 @@
             <router-link to="/"><img id="footer-logo" src="../assets/logo_big.png" alt="Sec for tech logo"></router-link>
             <div class="links top">
                 <ul class="links-list list-group list-unstyled">
-                    <li v-for="link in links"><a>{{ link }}</a></li>
+                    <li v-for="link in links">
+                        <router-link class="nav-link" :to="link.url">{{ link.name }}</router-link>  
+                    </li>
                 </ul>
             </div>
             <div class="links bottom">
                 <div>
-                    <a class="link-light" href="https://github.com/etherlesss/S4T-web" target="_blank"><i
+                    <a class="link-light" href="https://github.com/etherlesss/s4t-vue" target="_blank"><i
                             class="bi bi-github" style="font-size: 24px;"></i></a>
                 </div>
             </div>
@@ -23,7 +25,11 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     data() {
         return {
-            links: ['Tienda', 'Sobre nosotros', 'Contacto', 'Soporte']
+            links: [
+                { name: 'Productos', url: '/search' },
+                { name: 'Sobre nosotros', url: '/about'},
+                { name: 'Soporte al cliente', url: '/support'}
+            ]
         };
     },
     name: 'Footer'
@@ -52,7 +58,6 @@ footer .top {
 
 footer .bottom {
     padding: 20px;
-    margin-bottom: -20px;
 }
 
 footer h2 {

@@ -5,7 +5,7 @@
                 <div class="content d-flex flex-column text-center">
                     <h1 id="section-title">PREGUNTAS FRECUENTES</h1>
                     <ul class="qna list-unstyled mt-4">
-                        <li v-for="question in questions">
+                        <li v-for="question in questions" :key="question.id">
                             <h2>{{ question.pregunta }}</h2>
                             <p>{{ question.respuesta }}</p>
                         </li>
@@ -20,18 +20,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import qnaData from '../json/qnaData.json';
 
 export default defineComponent({
     data() {
         return {
-            questions: [
-                { pregunta: 'Pregunta 1', respuesta: 'Respuesta 1' },
-                { pregunta: 'Pregunta 2', respuesta: 'Respuesta 2' },
-                { pregunta: 'Pregunta 3', respuesta: 'Respuesta 3' },
-                { pregunta: 'Pregunta 4', respuesta: 'Respuesta 4' },
-                { pregunta: 'Pregunta 5', respuesta: 'Respuesta 5' },
-                { pregunta: 'Pregunta 6', respuesta: 'Respuesta 6' },
-            ]
+            questions: qnaData
         }
     },
     name: 'Qna'

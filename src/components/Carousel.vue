@@ -1,14 +1,8 @@
 <template>
     <div id="carouselExampleAutoplaying" class="carousel slide mb-5" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://polmankab.go.id/assets/2021/image/banner-inside-a.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="https://polmankab.go.id/assets/2021/image/banner-inside-a.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="https://polmankab.go.id/assets/2021/image/banner-inside-a.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-item" v-for="img in carouselContent" :key="img.id" :class="{'active': img.id == 1}">
+                <img :src="img.src" class="d-block w-100" :alt="img.alt">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -26,10 +20,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import carData from '../json/carouselData.json'
 
 export default defineComponent({
     data() {
-
+        return {
+            carouselContent: carData
+        }
     },
     name: 'Carousel'
 });

@@ -40,8 +40,7 @@
                             <label class="form-check-label" for="exampleCheck1">Acepto los <a href="#">términos y
                                     condiciones</a>.</label>
                         </div>
-                        <label class="form-check-label" for="exampleCheck1">¿Ya tienes cuenta? Inicia sesión <a
-                                href="/pages/login.html">aquí</a>.</label>
+                        <label class="form-check-label" for="exampleCheck1">¿Ya tienes cuenta? Inicia sesión <router-link to="/login">aquí</router-link>.</label>
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary main-btn" id="btnSignUp">Registrarse</button>

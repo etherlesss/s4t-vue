@@ -15,10 +15,10 @@
             </div>
         </div>
         <div class="back-btn">
-            <a class="link-light bottom-hint d-flex align-items-center p-2 gap-2" href="/index.html">
+            <router-link class="link-light bottom-hint d-flex align-items-center p-2 gap-2" to="/">
                 <i class="bi bi-arrow-left fs-5"></i>
                 <p class="mb-0 fs-5">Volver al inicio</p>
-            </a>
+            </router-link>
         </div>
     </aside>
 </template>

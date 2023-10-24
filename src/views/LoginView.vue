@@ -20,8 +20,8 @@
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
                         </div>
-                        <label class="form-check-label" for="exampleCheck1">¿No tienes cuenta? Registrate <a
-                                href="/pages/signup.html">aquí</a>.</label>
+                        <label class="form-check-label" for="exampleCheck1">¿No tienes cuenta? Registrate 
+                            <router-link to="/signup">aquí</router-link>.</label>
                     </div>
                     <div class="mb-3 col-12">
                         <button type="submit" class="btn btn-primary main-btn">Iniciar sesión</button>
