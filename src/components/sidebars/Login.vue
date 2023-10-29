@@ -1,8 +1,8 @@
 <template>
-    <aside class="login-sidebar">
-        <div>
+    <aside class="login-sidebar d-none d-md-block">
+        <div id="login-sidebar">
             <h1>Gusto verte de nuevo</h1>
-            <div class="secondary-container">
+            <div id="secondaryPrimary" class="secondary-container">
                 <p>Continuar usando</p>
                 <ul class="list-unstyled">
                     <li>
@@ -13,12 +13,12 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="back-btn">
+            <div class="back-btn">
             <router-link class="link-light bottom-hint d-flex align-items-center p-2 gap-2" to="/">
                 <i class="bi bi-arrow-left fs-5"></i>
                 <p class="mb-0 fs-5">Volver al inicio</p>
             </router-link>
+        </div>
         </div>
     </aside>
 </template>
@@ -42,6 +42,7 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 100px;
 }
 
 .login-sidebar p {
@@ -60,6 +61,6 @@ export default defineComponent({
 }
 
 .secondary-container {
-    margin-top: 20vh;
+    margin-top: 10vh;
 }
 </style>

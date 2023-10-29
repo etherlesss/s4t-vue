@@ -1,6 +1,6 @@
 <template>
     <div class="form-content">
-        <div class="main-content container-md w-75">
+        <div class="signup container-md w-75">
             <h2 class="w-25">Registro</h2>
             <Form class="row g-3">
                 <div class="mb-3 col-12" v-for="{ as, name, label, children, ...attrs } in schema.fields" :key="name">
@@ -81,16 +81,16 @@ export default {
     color: red;
 }
 
-
-.main-content {
-    display: flex;
+.signup {
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-h2 {
+.signup h2 {
     font-size: 24px;
     width: 100%;
     padding: 0 0 10px;

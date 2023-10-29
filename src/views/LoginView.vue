@@ -3,7 +3,25 @@
         <LoginSidebar />
         <loginForm :schema="formSchema"/>
     </div>
-    
+    <div class="d-md-none">
+        <div id="secondaryLogin" class="secondary-container">
+            <p>Continuar usando</p>
+            <ul class="list-unstyled">
+                <li>
+                    <a class="link-dark" href="#"><i class="bi bi-google"></i></a>
+                </li>
+                <li>
+                    <a class="link-dark" href="#"><i class="bi bi-facebook"></i></a>
+                </li>
+            </ul>
+            <div class="back-btn">
+            <router-link class="link-dark bottom-hint d-flex align-items-center p-2 gap-2" to="/">
+                <i class="bi bi-arrow-left fs-5"></i>
+                <p class="mb-0 fs-5">Volver al inicio</p>
+            </router-link>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -55,9 +73,11 @@ export default defineComponent({
 .form-content {
     flex-grow: 1;
 }
+
 .page{
     display: flex;
 }
+
 .form-title {
     font-size: 24px;
     width: 100%;
@@ -73,4 +93,22 @@ export default defineComponent({
     align-items: center;
     height: 100vh;
 }
+
+#secondaryLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondary-container ul{
+    display: flex;
+}
+
+.secondary-container li{
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 </style>

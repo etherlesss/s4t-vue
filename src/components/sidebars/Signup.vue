@@ -1,8 +1,8 @@
 <template>
-    <aside class="signup-sidebar">
-        <div>
+    <aside class="signup-sidebar d-none d-md-block">
+        <div >
             <h1>Bienvenido</h1>
-            <div class="secondary-container">
+            <div id="secondaryPrimary" class="secondary-container">
                 <p>Continuar usando</p>
                 <ul class="list-unstyled">
                     <li>
@@ -13,12 +13,12 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="back-btn">
+            <div class="back-btn">
             <router-link class="link-light bottom-hint d-flex align-items-center p-2 gap-2" to="/">
                 <i class="bi bi-arrow-left fs-5"></i>
                 <p class="mb-0 fs-5">Volver al inicio</p>
             </router-link>
+        </div>
         </div>
     </aside>
 </template>
@@ -32,16 +32,19 @@ export default defineComponent({
 </script>
 
 <style lang="less">
+
+
 .signup-sidebar {
     background-color: #121212;
     color: #ffffff;
     width: 30vw;
-    height: 100vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 100px;
 }
 
 .signup-sidebar p {
@@ -57,6 +60,14 @@ export default defineComponent({
 
 .signup-sidebar .bi {
     font-size: 32px;
+}
+
+.back-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .secondary-container {
